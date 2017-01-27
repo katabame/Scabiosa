@@ -16,9 +16,9 @@ vender(prop, arg)
 for key, color in color
 	.{key}
 		if (key == 'yellow' or key == 'sunflower' or key == 'lime' or key == 'white') // hardcoded
-			color #000
+			color: #000
 		else
-			color #fff
+			color: #fff
 		background-color: color !important
 		border-color: color !important
 		a
@@ -101,17 +101,22 @@ a
 	background-color: #f9f2f4
 
 .panel
-	width 100%
-	margin 0 1.25%
-	margin-bottom 2rem
-	border 1px solid
-	overflow hidden
-	box-shadow 0 0 .5rem shadow
-	.header, .footer
-		padding 1rem .8rem
-		position relative
-	.body
-		padding 1.5rem 1rem
+	width: 100%
+	margin: 0 1.25%
+	margin-bottom: 2rem
+	border: 1px solid
+	overflow: hidden
+	box-shadow: 0 0 .1rem shadow
+	.header, header
+		padding: 1rem .4rem
+		position: relative
+		border-bottom: 1px solid #e3e3e3
+	.footer, footer
+		padding: 1rem .4rem
+		position: relative
+		border-top: 1px solid #e3e3e3
+	.body, body
+		padding: 1.5rem 1rem
 
 for i in 1..6
 	.h{i}, h{i}
@@ -132,6 +137,9 @@ b, strong
 
 i, em
 	font-style: italic
+
+hr
+	border-top: 1px solid #e3e3e3
 
 blockquote
 	padding: 12px 24px
@@ -160,18 +168,18 @@ blockquote
 	color: #fff
 	margin: 0 0
 	border: none
-	width 0
-	height 100%
-	display flex
-	flex-direction row
-	justify-content center
-	align-items center
+	width: 0
+	height: 100%
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
 	&.stripe
-		background-image linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)!important
-		background-size 3rem 3rem !important
-		box-shadow inset 0 0 .5rem shadow
+		background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)!important
+		background-size: 3rem 3rem !important
+		box-shadow: inset 0 0 .1rem shadow
 	&.animation
-		animation progress-bar-animation 2s linear infinite
+		animation: progress-bar-animation 2s linear infinite
 
 // Grid System
 .grid

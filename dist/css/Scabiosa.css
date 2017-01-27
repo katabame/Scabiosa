@@ -277,14 +277,22 @@ code {
   margin-bottom: 2rem;
   border: 1px solid;
   overflow: hidden;
-  box-shadow: 0 0 0.5rem rgba(0,0,0,0.25);
+  box-shadow: 0 0 0.1rem rgba(0,0,0,0.25);
 }
 .panel .header,
-.panel .footer {
-  padding: 1rem 0.8rem;
+.panel header {
+  padding: 1rem 0.4rem;
   position: relative;
+  border-bottom: 1px solid #e3e3e3;
 }
-.panel .body {
+.panel .footer,
+.panel footer {
+  padding: 1rem 0.4rem;
+  position: relative;
+  border-top: 1px solid #e3e3e3;
+}
+.panel .body,
+.panel body {
   padding: 1.5rem 1rem;
 }
 .h1,
@@ -350,6 +358,9 @@ i,
 em {
   font-style: italic;
 }
+hr {
+  border-top: 1px solid #e3e3e3;
+}
 blockquote {
   padding: 12px 24px;
   margin: 0 0 24px;
@@ -381,7 +392,7 @@ blockquote {
 .progress-bar.stripe {
   background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent) !important;
   background-size: 3rem 3rem !important;
-  box-shadow: inset 0 0 0.5rem rgba(0,0,0,0.25);
+  box-shadow: inset 0 0 0.1rem rgba(0,0,0,0.25);
 }
 .progress-bar.animation {
   animation: progress-bar-animation 2s linear infinite;
