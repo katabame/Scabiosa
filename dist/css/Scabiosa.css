@@ -38,7 +38,7 @@
   color: #ff9800;
 }
 .sunflower {
-  color: #000;
+  color: #212121;
   background-color: #ffc107 !important;
   border-color: #ffc107 !important;
 }
@@ -47,7 +47,7 @@
   color: #ffc107;
 }
 .yellow {
-  color: #000;
+  color: #212121;
   background-color: #ffeb3b !important;
   border-color: #ffeb3b !important;
 }
@@ -56,7 +56,7 @@
   color: #ffeb3b;
 }
 .lime {
-  color: #000;
+  color: #212121;
   background-color: #cddc39 !important;
   border-color: #cddc39 !important;
 }
@@ -181,8 +181,17 @@
   text-decoration: none;
   color: #607d8b;
 }
+.lightgrey {
+  color: #212121;
+  background-color: #e9e9e9 !important;
+  border-color: #e9e9e9 !important;
+}
+.lightgrey a {
+  text-decoration: none;
+  color: #e9e9e9;
+}
 .white {
-  color: #000;
+  color: #212121;
   background-color: #fff !important;
   border-color: #fff !important;
 }
@@ -196,6 +205,15 @@
 .center > * {
   margin-left: auto !important;
   margin-right: auto !important;
+}
+.glass {
+/*
+		This is an experimental future
+		only Safari Webkit user can see this effect
+	*/
+  -moz-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 * {
   -moz-box-sizing: border-box;
@@ -250,6 +268,12 @@ label,
   opacity: 0;
   transition: 0.25s opacity;
 }
+.button:hover {
+  -moz-filter: brightness(0.8);
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
+  transition: 0.25s filter;
+}
 .button:active:after {
   opacity: 1;
   border-radius: 4px;
@@ -279,21 +303,18 @@ code {
   overflow: hidden;
   box-shadow: 0 0 0.1rem rgba(0,0,0,0.25);
 }
-.panel .header,
-.panel header {
-  padding: 1rem 0.4rem;
+.panel .header {
+  padding: 0.7rem 0.6rem;
   position: relative;
   border-bottom: 1px solid #e3e3e3;
 }
-.panel .footer,
-.panel footer {
-  padding: 1rem 0.4rem;
+.panel .footer {
+  padding: 0.4rem 0.6rem;
   position: relative;
   border-top: 1px solid #e3e3e3;
 }
-.panel .body,
-.panel body {
-  padding: 1.5rem 1rem;
+.panel .body {
+  padding: 1rem 1rem;
 }
 .h1,
 h1 {

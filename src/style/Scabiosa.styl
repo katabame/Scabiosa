@@ -15,8 +15,8 @@ vender(prop, arg)
 
 for key, color in color
 	.{key}
-		if (key == 'yellow' or key == 'sunflower' or key == 'lime' or key == 'white') // hardcoded
-			color: #000
+		if (key == 'yellow' or key == 'sunflower' or key == 'lime' or key == 'lightgrey' or key == 'white') // hardcoded
+			color: #212121
 		else
 			color: #fff
 		background-color: color !important
@@ -33,6 +33,13 @@ shadow = rgba(0 0 0 0.25)
 	& > *
 		margin-left: auto !important
 		margin-right: auto !important
+
+.glass
+	/*
+		This is an experimental future
+		only Safari Webkit user can see this effect
+	*/
+	vender backdrop-filter blur(10px)
 
 // CSS design
 *
@@ -80,6 +87,9 @@ a
 		background: shadow
 		opacity: 0
 		transition: .25s opacity
+	&:hover
+		vender filter brightness(0.8)
+		transition: .25s filter
 	&:active
 		&:after
 			opacity: 1
@@ -107,16 +117,16 @@ a
 	border: 1px solid
 	overflow: hidden
 	box-shadow: 0 0 .1rem shadow
-	.header, header
-		padding: 1rem .4rem
+	.header
+		padding: .7rem .6rem
 		position: relative
 		border-bottom: 1px solid #e3e3e3
-	.footer, footer
-		padding: 1rem .4rem
+	.footer
+		padding: .4rem .6rem
 		position: relative
 		border-top: 1px solid #e3e3e3
-	.body, body
-		padding: 1.5rem 1rem
+	.body
+		padding: 1rem 1rem
 
 for i in 1..6
 	.h{i}, h{i}
